@@ -1,0 +1,17 @@
+nc: 13
+names:
+- person
+- bicycle
+- car
+- motorcycle
+- airplane
+- bus
+- train
+- truck
+- boat
+- beam
+- deer
+- gcooter
+- others
+train: /mnt/home/20230302/Project/train.txt
+val: /mnt/home/20230302/Project/val.txt

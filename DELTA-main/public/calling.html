@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Master HTML</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f9;
+        padding: 20px;
+        color: #333;
+    }
+    form {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 10px;
+    }
+    input, button {
+        padding: 10px;
+        margin: 10px 0;
+        display: block;
+        width: 95%;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+    button {
+        background: #5c67f2;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #4a54e1;
+    }
+    input:focus, button:focus {
+        outline: none;
+        border-color: #5c67f2;
+    }
+</style>
+</head>
+<body>
+<form method="post" action="/reset">
+    <button type="submit">reset</button>
+</form>
+<form method="post" action="/record">
+    <input id="bonus" name="bonus" placeholder="Number of bonus">
+    <input id="nam" name="nam" placeholder="name">
+    <button type="submit">record</button>
+</form>
+<form method="post" action="/manualRecord">
+    <input id="sec" name="sec" placeholder="remaining time(sec)">
+    <input id="hint" name="hint" placeholder="hintcount">
+    <input id="bonus" name="bonus" placeholder="Number of bonus">
+    <input id="nam" name="nam" placeholder="name">
+    <button type="submit">manual record</button>
+</form>
+<form method="post" action="/search">
+    <button type="submit">search</button>
+</form>
+<form method="post" action="/del">
+    <input id="delid" name="delid" placeholder="idx to del">
+    <button type="submit">delete</button>
+</form>
+<div id="query"></div>
+<script>
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+path: /mnt/home/20230302/Project/datasets/coco_pv
+train: images
+val: images
+nc: 9
+names: ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat']

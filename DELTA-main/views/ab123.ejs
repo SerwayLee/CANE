@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>control</title>
+</head>
+<body>
+  <h1>영상 제어 페이지</h1>
+  <button id="reset">리셋</button>
+  <button id="forced">송출</button>
+  <h2>전송 상황:</h2>
+  <p id="send-status">.</p>
+
+  <script>
+    let isSending = true; 
+    let currentLux = null; 
+
+    function sendLuxData(luxValue) {
+      if (!isSending) return;
+
+    }
+    function sendLuxData2(luxValue) {
+      fetch('/getFlag', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ luxValue })
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('서버로 전송 성공:', data);
+        document.getElementById("send-status").textContent = `전송 성공: ${luxValue} lux(-100 : 리셋, +1 : 송출)`;
+      })
+      .catch(error => {
+        console.error('서버로 전송 실패:', error);
+        document.getElementById("send-status").textContent = `전송 실패: ${error}`;
+      });
+    }
+
+
+
+    document.getElementById("reset").addEventListener("click", () => {
+        sendLuxData2(-100); 
+        document.getElementById("send-status").textContent = "리셋 전송 완료";
+    });
+    document.getElementById("forced").addEventListener("click", () => {
+        sendLuxData2(1); 
+        document.getElementById("send-status").textContent = "강제 송출 완료";
+
+    });
+  </script>
+</body>
+</html>

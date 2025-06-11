@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HintPhone2024spring</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+<style>
+    body {
+		overscroll-behavior: none;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: black;
+    }
+    svg {
+        width: 80vw;
+        height: 80vw;
+        margin-top: 5vw;
+      }
+    #remaining-time {
+        fill: white;
+        font-size: 22px; 
+        text-anchor: middle; 
+        dominant-baseline: central;
+      }
+      #PIN {
+        color:white;
+        text-align:center;
+        font-family: "Do Hyeon", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    #hints-count {
+        fill: white;
+        font-size: 10px; 
+        text-anchor: middle; 
+        dominant-baseline: central;
+      }
+    #startButton,
+    #okButton {
+        padding: 10px 20px;
+        font-size: 18px;
+        color: #fff;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        justify-content: center;
+        background-color: black;
+        color: white;
+    }
+    #backButton1,#backButton2,#backButton3,#backButton4,#backButton5,#backButton6,#backButton7,#backButton8,#backButton9,#backButton10,#backButton11 {
+        padding: 10px 20px;
+        font-size: 18px;
+        color: #fff;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        justify-content: center;
+        background-color: black;
+        color: white;
+    }
+    
+    #textInput {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: calc(100% - 40px);
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        justify-content: center;
+        text-align: center;
+        font-family: "Do Hyeon", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+
+    }
+    textarea {
+        width: 75vw;
+        height: 90vw;
+        padding: 10px;
+        box-sizing: border-box;
+        border: solid 2px #ffffff;
+        border-radius: 5px;
+        font-size: 16px;
+        resize: both;
+        font-family: "Do Hyeon", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    #wrap {
+        display: flex;
+        justify-content: center;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #contentSection {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        justify-content: center;
+
+    }
+
+    #contents {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    #inputSection {
+        width: 95%;
+        padding: 10px;
+        border: 3px solid #ccc;
+        border-radius: 5px;
+        margin: 0 auto;
+
+    }
+	
+	.image{
+		width: 100vw;
+		height: 100vh;
+		justify-content: center;
+	
+	
+	}
+
+    .hidden {
+        display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+        #contentSection {
+            font-size: 14px;
+        }
+    }
+    
+
+</style>
+</head>
+<body>
+<button id="masterButton1" class="hidden">callIn</button>
+<button id="masterButton2" class="hidden">callOut</button>
+</form>
+
+<div id="total">
+<div id="timeCounter" class="hidden" style="text-align:center" >남은 시간 : <span id="second">60분 0초</span></div>
+
+<div id="hintCounter"class="hidden"style="text-align:center" >힌트폰 사용 횟수 : <span id="hintCount"></span></div>
+    <div style="text-align:center"><button id="startButton">END</button></div>
+<div id="inputSection" class="hidden">
+    <div id="wrap"><input type>="text" id="textInput" placeholder="코드를 입력하세요" style="margin: 0;"></div>
+    <div class="button-container">
+        <button id="okButton">OK</button>
+    </div>
+</div>
+</div>
+
+<div id="imgg" class="hidden">
+	<img class="image"/>
+</div>
+</div>
+<script>
+ 
+</script>
+</body>
+</html>

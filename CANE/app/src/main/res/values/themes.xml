@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.CANE" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- 또는 Theme.AppCompat.DayNight.DarkActionBar 등 AppCompat 기반 테마 -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- 필요 시 추가 -->
+    </style>
+</resources>
